@@ -1,1 +1,1 @@
-py.test ./test*.py --reportportal
+py.test ./test1.py ./test2.py --reportportal

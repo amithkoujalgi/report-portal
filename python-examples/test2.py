@@ -1,5 +1,8 @@
-# In this case only INFO messages will be sent to the Report Portal.
-def test_one(rp_logger):
+import pytest
+
+
+@pytest.mark.issue(issue_id="111111", reason="Some bug", issue_type="PB")
+def test_send_attachment(rp_logger):
     rp_logger.info("Case1. Step1")
     x = "this"
     rp_logger.info(f"x is: {x}")
@@ -17,5 +20,4 @@ def test_one(rp_logger):
         }
     )
 
-    # This debug message will not be sent to the Report Portal.
     rp_logger.debug("Case1. Debug log...")
