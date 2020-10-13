@@ -2,3 +2,5 @@
 data/*
 *.pyc
 python-examples/.idea/*
+.DS_Store
+java-example/*
